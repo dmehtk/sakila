@@ -178,7 +178,7 @@
 					PagingDao pagingDao = new PagingDao();
 					ArrayList<Paging> plList = pagingDao.groupPaging(currentPage, pagePerGroup, lastPage);
 					
-					for(Paging pa : plList){
+					for(Paging pa : plList){// 구분
 						if(pa.getPageSelect() == true){ // 현재 페이지는  true 그 이외의 페이지는 false , 즉 현재페이지만 다른 색으로 구분해줌
 				%>
 					<li class="page-item"><a class="btn page-link" style="background-color: #e9ecef;" href="<%=request.getContextPath() %>/actor/actorList.jsp?currentPage=<%=pa.getPageNum()%>&searchWord=<%=searchWord%>"><%=pa.getPageNum()%></a></li>
